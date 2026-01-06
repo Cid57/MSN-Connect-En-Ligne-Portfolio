@@ -1,0 +1,228 @@
+/* Dégradé de fond */
+body {
+    background: linear-gradient(to bottom, #9da7d2, #4d5ea8);
+}
+
+/* Conteneur de gestion des administrateurs */
+.gestion-administrateur {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 0.5rem 0rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.gestion-administrateur img {
+    /* Taille de l'image */
+    height: 50px;
+    margin-right: 15px;
+}
+
+.gestion-administrateur h1 {
+    /* Titre centré et stylisé */
+    flex-grow: 1;
+    margin: 0;
+    color: #4A90E2;
+    font-family: "Sedan SC", serif;
+    font-size: 32px;
+    text-align: center;
+}
+
+.gestion-administrateur .actions {
+    /* Conteneur pour les actions */
+    display: flex;
+    gap: 10px;
+}
+
+.gestion-administrateur .actions a img {
+    /* Style des icônes d'action */
+    height: 46px;
+    width: 44px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gestion-administrateur .actions a img:hover {
+    /* Effet au survol des icônes d'action */
+    transform: scale(1.1);
+}
+
+/* Adaptation pour les petits écrans */
+@media (max-width: 768px) {
+    .gestion-administrateur {
+        align-items: center;
+        text-align: center;
+    }
+
+    .gestion-administrateur img,
+    .gestion-administrateur h1 {
+        margin: 10px 0;
+    }
+
+    .gestion-administrateur .actions {
+        margin-top: 10px;
+    }
+}
+
+/* Style pour la section globale des canaux */
+.modifier-channel {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 40px;
+    max-width: 800px;
+    margin: 2rem auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.modifier-channel:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.modifier-channel h2 {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    background: linear-gradient(to right, #4A90E2, #4d5ea8);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-bottom: 2px solid #4A90E2;
+}
+
+/* Style pour la liste des canaux */
+.modifier-channel .modifier-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.modifier-channel .modifier-list li {
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    display: flex;
+    gap: 10px;
+    /* Aligner les boutons en ligne */
+    justify-content: space-between;
+    transition: box-shadow 0.3s ease;
+}
+
+.modifier-channel .modifier-list li:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Conteneur pour les actions sur les canaux */
+.channel-actions {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+/* Conteneur flex pour les inputs et boutons dans les formulaires */
+.modify-form,
+.add-user-form,
+.remove-user-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Style des inputs de texte */
+.modifier-channel input[type="text"] {
+    flex: 1;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.modifier-channel input[type="text"]:focus {
+    border-color: #4A90E2;
+    outline: none;
+}
+
+/* Style pour les boutons */
+.modifier-channel .btn-modifier,
+.modifier-channel .btn-ajouter,
+.modifier-channel .btn-supprimer {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.modifier-channel .btn-ajouter {
+    background-color: #28a745;
+}
+
+.modifier-channel .btn-supprimer {
+    background-color: #dc3545;
+}
+
+
+
+
+/* Responsivité pour les écrans moyens et petits */
+@media (max-width: 768px) {
+
+    .modify-form,
+    .add-user-form,
+    .remove-user-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    /* Adapter les boutons à la largeur de l'écran */
+    .modify-form input[type="submit"],
+    .add-user-form input[type="submit"],
+    .remove-user-form input[type="submit"] {
+        width: 100%;
+        /* Prendre toute la largeur */
+        margin-bottom: 10px;
+        /* Espacement entre les boutons */
+    }
+
+    .modifier-channel {
+        max-width: 100%;
+    }
+}
+
+/* Pour les très petits écrans, moins de 480px */
+@media (max-width: 480px) {
+
+    .modify-form,
+    .add-user-form,
+    .remove-user-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .modify-form input[type="text"],
+    .add-user-form input[type="submit"],
+    .remove-user-form input[type="submit"] {
+        width: 100%;
+        /* Occuper toute la largeur de l'écran */
+    }
+
+    .modify-form input[type="submit"],
+    .add-user-form input[type="submit"],
+    .remove-user-form input[type="submit"] {
+        margin-bottom: 10px;
+        /* Ajout d'espacement entre les boutons */
+    }
+}

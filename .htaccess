@@ -1,0 +1,63 @@
+# Configuration Apache pour MSN Connect
+
+# Bloquer l'accès au fichier .env
+<Files ".env">
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Bloquer l'accès aux fichiers .env.*
+<FilesMatch "^\.env">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Bloquer l'accès au dossier .git
+<DirectoryMatch "^\.|\/\.git">
+    Order allow,deny
+    Deny from all
+</DirectoryMatch>
+
+# Bloquer l'accès aux fichiers de logs
+<FilesMatch "\.(log|sql)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Bloquer l'accès aux fichiers de configuration
+<FilesMatch "^(composer\.(json|lock)|\.gitignore)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Protection contre le listing des répertoires
+Options -Indexes
+
+# Protection XSS
+<IfModule mod_headers.c>
+    Header set X-XSS-Protection "1; mode=block"
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "DENY"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# Forcer HTTPS (décommenter en production avec SSL)
+# <IfModule mod_rewrite.c>
+#     RewriteEngine On
+#     RewriteCond %{HTTPS} off
+#     RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# </IfModule>
+
+# Limiter la taille des uploads (5 MB)
+php_value upload_max_filesize 5M
+php_value post_max_size 5M
+
+# Configuration session sécurisée
+php_value session.cookie_httponly 1
+php_value session.use_strict_mode 1
+php_value session.cookie_samesite Strict
+
+# Masquer la version PHP
+<IfModule mod_headers.c>
+    Header unset X-Powered-By
+</IfModule>

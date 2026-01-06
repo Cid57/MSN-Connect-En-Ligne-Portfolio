@@ -1,0 +1,333 @@
+/* Styles de succès */
+.channel-success {
+    font-size: 1.2rem;
+    color: violet;
+    margin-left: 1rem;
+}
+
+/* Section principale de la conversation */
+/* .content-right-section {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to bottom, #4d5ea8, #9da7d2);
+    border-bottom: 1px solid #ccc;
+    height: 90.1vh;
+
+} */
+.content-right-section {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to bottom, #4d5ea8, #9da7d2);
+    border-bottom: 1px solid #ccc;
+    min-height: calc(100vh - 100px);
+    box-sizing: border-box;
+    /* Assure que padding/border sont inclus dans la hauteur totale */
+    overflow: hidden;
+
+}
+
+/* Style des images dans la section */
+.content-right-section img {
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+/* Style des titres dans la section */
+.content-right-section h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    color: white;
+    margin: 0 0 1rem 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to bottom, #4d5ea8, #9da7d2);
+    padding: 1rem;
+    max-width: 100%;
+    height: calc(100vh - 100px);
+    box-sizing: border-box;
+
+    overflow: hidden;
+}
+
+/* Conteneur pour les messages */
+.message-container {
+    overflow-y: auto;
+    flex-grow: 1;
+    padding: 0.5rem;
+}
+
+/* Style de base pour les messages */
+.message {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+/* Style pour l'auteur du message */
+.message-author {
+    padding-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+/* Alignement des messages envoyés et reçus */
+.message.sent {
+    align-items: flex-end;
+}
+
+.message.received {
+    align-items: flex-start;
+}
+
+/* Contenu du message avec des styles différents */
+.message-content {
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    background-color: #e5e5ea;
+    color: white;
+    max-width: 70%;
+    word-wrap: break-word;
+    font-size: 0.9rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0.5rem;
+}
+
+.message.sent .message-content {
+    background-color: #0084ff;
+    color: white;
+    text-align: right;
+}
+
+.message.received .message-content {
+    background-color: #e5e5ea;
+    color: black;
+    text-align: left;
+}
+
+/* Style pour l'horodatage des messages */
+.message-time {
+    font-size: 0.8rem;
+    color: #000;
+}
+
+/* Formulaire pour envoyer des messages */
+.message-form {
+    display: flex;
+    padding: 0.5rem;
+    border-top: 1px solid #e0e0e0;
+}
+
+/* Conteneur pour les contrôles du formulaire */
+.form-controls {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    border-radius: 1.5rem;
+    border: 1px solid #e0e0e0;
+    padding: 0.3rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Zone de texte pour saisir des messages */
+textarea {
+    flex: 1;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 1.5rem;
+    resize: none;
+    outline: none;
+    font-size: 1rem;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #fff;
+    margin-right: 0.5rem;
+    box-sizing: border-box;
+}
+
+/* Bouton pour envoyer des messages */
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Style pour l'auteur du message */
+.message-author {
+    transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.message-author:hover {
+    color: #171c32;
+    transform: scale(1.05);
+}
+
+/* Media queries pour les écrans plus petits */
+/* @media (max-width: 768px) {
+
+    .content-right-section,
+    .chat-container {
+        padding: 0.5rem;
+
+    }
+
+    .message-content {
+        font-size: 0.8rem;
+    }
+
+    .message-author {
+        font-size: 0.9rem;
+    }
+
+    textarea {
+        font-size: 0.9rem;
+    }
+
+    button {
+        padding: 0.4rem;
+    }
+
+
+}
+
+
+@media (max-width: 480px) {
+
+    .content-right-section,
+    .chat-container {
+        padding: 0.25rem;
+        height: 84.8vh;
+    }
+
+    .message-content {
+        font-size: 0.7rem;
+    }
+
+    .message-author {
+        font-size: 0.8rem;
+    }
+
+    textarea {
+        font-size: 0.8rem;
+    }
+
+    button {
+        padding: 0.3rem;
+    }
+
+    .sidebar-left {
+        display: none;
+    }
+
+    .content-right-section h2 {
+        margin: 0.4rem 0 1rem 1rem;
+    }
+
+} */
+
+/* Media queries pour les écrans plus petits */
+@media (max-width: 768px) {
+
+    .content-right-section,
+    .chat-container {
+        padding: 0.5rem;
+        height: calc(100vh - 80px);
+
+    }
+
+    .message-content {
+        font-size: 0.8rem;
+    }
+
+    .message-author {
+        font-size: 0.9rem;
+    }
+
+    textarea {
+        font-size: 0.9rem;
+    }
+
+    button {
+        padding: 0.4rem;
+    }
+
+    .sidebar-left {
+        width: 200px;
+        /* Réduire légèrement la taille de la barre latérale */
+    }
+
+}
+
+/* Media queries pour les très petits écrans */
+@media (max-width: 480px) {
+
+    .content-right-section,
+    .chat-container {
+        padding: 0.25rem;
+        min-height: calc(100vh - 60px);
+
+    }
+
+    .message-content {
+        font-size: 0.7rem;
+    }
+
+    .message-author {
+        font-size: 0.8rem;
+    }
+
+    textarea {
+        font-size: 0.8rem;
+    }
+
+    button {
+        padding: 0.3rem;
+    }
+
+    .sidebar-left {
+        display: none;
+
+    }
+
+    .content-right-section h2 {
+        margin: 0.4rem 0 1rem 0.5rem;
+
+        font-size: 1.2rem;
+
+    }
+
+}
+
+/* Style pour les messages d'erreur */
+.error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.error-message svg {
+    fill: #721c24;
+    margin-right: 10px;
+}

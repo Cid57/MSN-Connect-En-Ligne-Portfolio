@@ -1,0 +1,334 @@
+/* Formulaire de CONNEXION */
+.inscription {
+  min-height: 100vh;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: #6a6f8c;
+  font: 600 16px/18px "Open Sans", sans-serif;
+  box-sizing: border-box;
+  background-image: url(../img/fond-connexion.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Overlay pour améliorer le contraste */
+.inscription::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 0;
+}
+
+/* Styles pour les onglets, labels et boutons */
+.login-html .tab,
+.login-form .group .label,
+.login-form .group .button {
+  text-transform: uppercase;
+}
+
+/* Onglets de la page de connexion */
+.login-html .tab {
+  font-family: "Sedan SC", serif;
+  font-size: 24px;
+  padding-bottom: 10px;
+  margin: 0 0 25px 0;
+  display: block;
+  text-align: center;
+  border-bottom: 3px solid #9da7d2;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Conteneur principal du formulaire de connexion */
+.login-wrap {
+  width: 100%;
+  margin: auto;
+  max-width: 420px;
+  background: transparent;
+  border-radius: 15px;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Conteneur du contenu HTML de la page de connexion */
+.login-html {
+  width: 100%;
+  padding: 35px 40px 35px 40px;
+  background: rgba(30, 42, 80, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Image décorative dans le formulaire */
+.login-image {
+  text-align: center;
+  margin: 0 0 20px 0;
+}
+
+.login-image img {
+  max-width: 80px;
+  height: auto;
+  opacity: 0.9;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+/* Style des labels */
+label {
+  padding-top: 5px;
+  color: #aaa;
+}
+
+/* Conteneur du formulaire de connexion */
+.login-form {
+  margin-bottom: 15px;
+  min-height: auto;
+}
+
+/* Espacement entre les groupes de champs */
+.login-form .group {
+  margin-bottom: 15px;
+}
+
+/* Styles des labels, inputs et boutons du formulaire de connexion */
+.login-form .group .label,
+.login-form .group .input,
+.login-form .group .button {
+  width: 100%;
+  color: #fff;
+  display: block;
+}
+
+/* Styles des inputs et boutons du formulaire de connexion */
+.login-form .group .input,
+.login-form .group .button {
+  padding: 12px 18px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Amélioration de la visibilité des inputs */
+.login-form .group .input {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.login-form .group .input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.login-form .group .input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid #9da7d2;
+  box-shadow: 0 0 10px rgba(157, 167, 210, 0.4);
+}
+
+/* Style pour le bouton */
+.login-form .group .button {
+  border: none;
+}
+
+/* Styles des labels du formulaire de connexion */
+.login-form .group .label {
+  color: #d0d4e8;
+  font-size: 14px;
+  padding-bottom: 10px;
+  font-family: "Sedan SC", serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Styles des boutons du formulaire de connexion */
+.login-form .group .button {
+  background: linear-gradient(135deg, #9da7d2 0%, #7e8bc2 100%);
+  margin-top: 25px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(157, 167, 210, 0.3);
+}
+
+/* Styles des boutons généraux */
+.group button {
+  letter-spacing: 2px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+/* Effet de survol pour les boutons */
+.group button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(157, 167, 210, 0.5);
+  background: linear-gradient(135deg, #aab4dd 0%, #8e9bcc 100%);
+}
+
+/* Style pour la ligne horizontale */
+.hr {
+  height: 2px;
+  margin: 25px 0 20px 0;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Lien mot de passe oublié */
+.foot-lnk a {
+  color: #9da7d2;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.foot-lnk a:hover {
+  color: #b8c0e0;
+  text-decoration: underline;
+}
+
+/* Fin du formulaire de CONNEXION */
+
+/* Icônes d'oeil pour le mot de passe */
+.mdp-icon {
+  position: relative;
+  top: -47px;
+  right: 0;
+  color: #9da7d2;
+  margin-bottom: -35px;
+}
+
+.mdp-icon:hover {
+  color: #b8c0e0;
+}
+
+/* Styles pour les icônes d'oeil */
+.eye,
+.eye-off {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+
+/* Fin des styles pour les icônes d'oeil */
+
+/* Messages d'erreur */
+.message-erreur {
+  color: #ff6b6b;
+  background: rgba(255, 107, 107, 0.15);
+  padding: 8px 15px;
+  border-radius: 15px;
+  margin-top: 8px;
+  font-size: 13px;
+  border-left: 3px solid #ff6b6b;
+}
+
+/* Navigation et logo */
+nav {
+  position: relative;
+  z-index: 2;
+  padding: 20px 0;
+}
+
+.vp-logo {
+  text-align: center;
+  padding: 10px;
+}
+
+.vp-logo img {
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+  transition: transform 0.3s ease;
+}
+
+.vp-logo img:hover {
+  transform: scale(1.05);
+}
+
+main {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+header {
+  background-color: transparent;
+}
+
+/* Adaptation mobile de la page de connexion */
+@media (max-width: 768px) {
+  .login-wrap {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .login-html {
+    padding: 35px 30px;
+    margin-top: 60px;
+  }
+
+  .login-html .tab {
+    font-size: 24px;
+    letter-spacing: 2px;
+  }
+
+  .login-form {
+    min-height: auto;
+  }
+
+  .login-form .group {
+    margin-bottom: 18px;
+  }
+
+  .login-form .group .label {
+    font-size: 13px;
+  }
+
+  .group .input,
+  .group .button {
+    padding: 12px 18px;
+    font-size: 14px;
+  }
+
+  .mdp-icon {
+    top: -45px;
+  }
+
+  .eye,
+  .eye-off {
+    right: 18px;
+  }
+
+  .message-erreur {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .hr {
+    margin: 25px 0 20px 0;
+  }
+
+  .vp-logo img {
+    height: 60px !important;
+  }
+
+  main {
+    padding: 15px;
+  }
+}

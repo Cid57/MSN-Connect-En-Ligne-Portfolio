@@ -1,0 +1,65 @@
+# =========================
+# Fichiers de configuration sensibles
+# =========================
+.env
+.env.local
+.env.*.local
+
+# =========================
+# Dépendances
+# =========================
+/vendor/
+composer.lock
+
+# =========================
+# Uploads utilisateurs
+# =========================
+/public/assets/uploads/*
+!/public/assets/uploads/.gitkeep
+
+# =========================
+# Logs
+# =========================
+*.log
+/logs/
+
+# =========================
+# Cache
+# =========================
+/cache/
+*.cache
+
+# =========================
+# Fichiers système
+# =========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =========================
+# IDE / Éditeurs
+# =========================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# =========================
+# Fichiers temporaires
+# =========================
+/tmp/
+*.tmp
+
+# =========================
+# Bases de données
+# =========================
+*.sql.gz
+*.sqlite
+*.db
+
+# =========================
+# Claude (local only)
+# =========================
+.claude/
+settings.local.json

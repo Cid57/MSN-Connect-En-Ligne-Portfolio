@@ -1,0 +1,210 @@
+body {
+    background: linear-gradient(to bottom, #9da7d2, #4d5ea8);
+
+}
+
+.gestion-administrateur {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 0.5rem 0rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-bottom: 30px;
+
+}
+
+.gestion-administrateur img {
+    height: 50px;
+    margin-right: 15px;
+}
+
+.gestion-administrateur h1 {
+    flex-grow: 1;
+    margin: 0;
+    color: #4A90E2;
+    font-family: "Sedan SC", serif;
+    font-size: 32px;
+    text-align: center;
+}
+
+.gestion-administrateur .actions {
+    display: flex;
+    gap: 10px;
+}
+
+.gestion-administrateur .actions a img {
+    height: 46px;
+    width: 44px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gestion-administrateur .actions a img:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 480px) {
+    .sidebar-left {
+        display: none;
+    }
+
+    .container-contact {
+        max-width: 80%;
+    }
+
+    .contact-list li {
+        display: flex;
+        flex-direction: column;
+        height: 11.3vh;
+    }
+
+    .recherche-barre input {
+        font-size: 13px !important;
+    }
+
+    .recherche-barre button {
+        font-size: 13px !important;
+    }
+
+    span {
+        padding-top: 0;
+    }
+
+    .contact-actions a {
+        padding: 8px 6px !important;
+        font-size: 13px;
+        margin-top: 20px;
+    }
+
+    .gestion-administrateur h1 {
+        font-size: 20px;
+    }
+
+    .gestion-administrateur {
+        padding: inherit;
+    }
+
+    .gestion-administrateur .actions a img {
+        height: 30px;
+        width: 30px;
+    }
+
+    .gestion-administrateur img,
+    .gestion-administrateur h1 {
+        margin: 5px 0;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .gestion-administrateur {
+    
+        align-items: center;
+        text-align: center;
+    }
+
+    .gestion-administrateur img,
+    .gestion-administrateur h1 {
+        margin: 10px 0;
+    }
+
+    .gestion-administrateur .actions {
+        margin-top: 10px;
+    }
+}
+
+
+
+
+.container-contact {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    padding: 20px;
+    margin: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 650px;
+}
+
+.recherche-barre {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.recherche-barre input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    width: 70%;
+}
+
+.recherche-barre button {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    background-color: #4A90E2;
+    color: white;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+    transition: background-color 0.3s ease;
+}
+
+.recherche-bar button:hover {
+    background-color: #357ABD;
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 20px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-list li:hover {
+    background-color: #f1f1f1;
+    transform: translateY(-2px);
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-details strong {
+    font-size: 16px;
+    color: #333;
+}
+
+.contact-details span {
+    font-size: 14px;
+    color: #666;
+}
+
+.contact-actions a {
+    background-color: #4A90E2;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-actions a:hover {
+    background-color: #357ABD;
+}

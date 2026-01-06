@@ -1,0 +1,262 @@
+body {
+    background: linear-gradient(to bottom, #9da7d2, #4d5ea8);
+}
+
+.gestion-administrateur {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 0.5rem 0rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.gestion-administrateur img {
+    height: 50px;
+    margin-right: 15px;
+}
+
+.gestion-administrateur h1 {
+    flex-grow: 1;
+    margin: 0;
+    color: #4A90E2;
+    font-family: "Sedan SC", serif;
+    font-size: 32px;
+    text-align: center;
+}
+
+.gestion-administrateur .actions {
+    display: flex;
+    gap: 10px;
+}
+
+.gestion-administrateur .actions a img {
+    height: 46px;
+    width: 44px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gestion-administrateur .actions a img:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .gestion-administrateur {
+
+        align-items: center;
+        text-align: center;
+    }
+
+
+
+    .gestion-administrateur .actions {
+        margin-top: 10px;
+    }
+}
+
+.container-profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    margin: 7rem auto;
+    width: 60%;
+    gap: 40px;
+}
+
+.content-block,
+.form-block {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.content-block {
+    min-height: 400px;
+
+}
+
+.form-block {
+    min-height: 400px;
+
+}
+
+.content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.content p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.content strong {
+    font-weight: bold;
+    color: #4A90E2;
+}
+
+.content form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
+
+
+button,
+.custom-file-upload {
+    background-color: #4A90E2;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 10px;
+    text-align: center;
+}
+
+button:hover,
+.custom-file-upload:hover {
+    background-color: #357ABD;
+    transform: translateY(-2px);
+}
+
+.container-modifier-mdp {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container-modifier-mdp form {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.container-modifier-mdp label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.container-modifier-mdp h2 {
+    font-family: "Sedan SC", serif;
+    color: #4A90E2;
+}
+
+.container-modifier-mdp input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.message {
+    color: red;
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.message_succee {
+    background-color: #dff0d8;
+    color: #3c763d;
+    border: 1px solid #d6e9c6;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    .container-profile {
+        flex-direction: column;
+        width: 80%;
+        gap: 20px;
+    }
+
+    .content-block,
+    .form-block {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+.group {
+    position: relative;
+}
+
+.mdp-icon {
+    position: absolute;
+    top: 39%;
+    right: 30px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: red;
+}
+
+.mdp-icon:hover {
+    color: rgb(221, 136, 136);
+}
+
+.mdp-icon .eye,
+.mdp-icon .eye-off {
+    width: 20px;
+    height: 20px;
+}
+
+/* Style pour l'input de l'avatar */
+.avatar-upload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.avatar-upload input[type="file"] {
+    display: none;
+}
+
+.avatar-upload .avatar-preview {
+    margin-top: 10px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ddd;
+}
+
+@media (max-width: 480px) {
+    .sidebar-left {
+        display: none;
+    }
+
+    .gestion-administrateur h1 {
+        font-size: 20px;
+    }
+
+    .gestion-administrateur img {
+        height: 30px;
+        margin-right: 15px;
+    }
+
+    .gestion-administrateur .actions a img {
+        height: 30px;
+        width: 30px;
+    }
+}

@@ -1,0 +1,147 @@
+/* Dégradé de fond pour le body */
+body {
+    background: linear-gradient(to bottom, #9da7d2, #4d5ea8);
+}
+
+/* Conteneur de gestion des administrateurs */
+.gestion-administrateur {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 0.5rem 0rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.gestion-administrateur .group-icon {
+    height: 50px;
+    margin-right: 15px;
+    margin-left: 10px;
+}
+
+.gestion-administrateur h1 {
+    flex-grow: 1;
+    margin: 0;
+    color: #4A90E2;
+    font-family: "Sedan SC", serif;
+    font-size: 32px;
+    text-align: center;
+}
+
+.gestion-administrateur .actions {
+    display: flex;
+    gap: 10px;
+}
+
+.gestion-administrateur .actions a img {
+    height: 46px;
+    width: 44px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gestion-administrateur img {
+
+    margin-right: 15px;
+}
+
+.gestion-administrateur .actions a img:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .gestion-administrateur {
+
+        align-items: center;
+        text-align: center;
+    }
+
+    .gestion-administrateur .group-icon,
+    .gestion-administrateur h1 {
+        margin: 10px 0;
+    }
+
+    .gestion-administrateur .actions {
+        margin-top: 10px;
+    }
+}
+
+/* Conteneur pour le formulaire de réactivation */
+.container-reactiver {
+    background-color: #f9f9f9;
+    padding: 40px;
+    border-radius: 8px;
+    margin: 2rem auto;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.table-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+}
+
+.group-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.group-checkbox:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.group-checkbox input[type="checkbox"] {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.group-checkbox p {
+    margin: 0;
+}
+
+/* Style pour les messages */
+.message {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 10px;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Conteneur pour le bouton de soumission */
+.sticky-button-container {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    background-color: #f9f9f9;
+}
+
+.submit-button {
+    background-color: #4A90E2;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #357ABD;
+    transform: translateY(-2px);
+}

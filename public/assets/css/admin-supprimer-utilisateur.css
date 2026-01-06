@@ -1,0 +1,241 @@
+/* Dégradé de fond */
+body {
+    background: linear-gradient(to bottom, #9da7d2, #4d5ea8);
+}
+
+/* Conteneur de gestion des administrateurs */
+.gestion-administrateur {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 0.5rem 0rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.gestion-administrateur img {
+    /* Taille de l'image */
+    height: 50px;
+    margin-right: 15px;
+}
+
+.gestion-administrateur h1 {
+    /* Titre centré et stylisé */
+    flex-grow: 1;
+    margin: 0;
+    color: #4A90E2;
+    font-family: "Sedan SC", serif;
+    font-size: 32px;
+    text-align: center;
+}
+
+.gestion-administrateur .actions {
+    /* Conteneur pour les actions */
+    display: flex;
+    gap: 10px;
+}
+
+.gestion-administrateur .actions a img {
+    /* Style des icônes d'action */
+    height: 46px;
+    width: 44px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gestion-administrateur .actions a img:hover {
+    /* Effet au survol des icônes d'action */
+    transform: scale(1.1);
+}
+
+/* Adaptation pour les petits écrans */
+@media (max-width: 768px) {
+    .gestion-administrateur {
+
+        align-items: center;
+        text-align: center;
+    }
+
+    .gestion-administrateur img,
+    .gestion-administrateur h1 {
+        margin: 10px 0;
+    }
+
+    .gestion-administrateur .actions {
+        margin-top: 10px;
+    }
+}
+
+/* Conteneur global pour la suppression */
+.container-supprimer {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 7rem auto;
+    transition: box-shadow 0.3s ease-in-out;
+    height: 600px;
+}
+
+.container-supprimer:hover {
+    /* Effet de survol pour le conteneur */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Barre de recherche */
+.recherche-barre {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.recherche-barre input {
+    /* Style de l'input de recherche */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    width: 70%;
+}
+
+.recherche-barre button {
+    /* Style du bouton de recherche */
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    background-color: #4A90E2;
+    color: white;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+    transition: background-color 0.3s ease;
+}
+
+.recherche-barre button:hover {
+    background-color: #357ABD;
+}
+
+/* Conteneur de la table des utilisateurs */
+.table-container {
+    overflow-y: auto;
+
+}
+
+/* Style des cases à cocher des utilisateurs */
+.user-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.user-checkbox:hover {
+    /* Effet de survol pour les cases à cocher */
+    background-color: #f1f1f1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.user-checkbox input[type="checkbox"] {
+    /* Style des cases à cocher */
+    transform: scale(1.2);
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.user-checkbox p {
+    /* Style du texte à côté de la case à cocher */
+    margin: 0;
+    cursor: pointer;
+}
+
+/* Conteneur pour le bouton de soumission, fixe en bas */
+.sticky-button-container {
+    position: sticky;
+    bottom: 0;
+    background-color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    border-top: 1px solid #ccc;
+}
+
+/* Style pour le bouton de soumission */
+.submit-button {
+    background-color: #4A90E2;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submit-button:hover {
+    /* Effet de survol pour le bouton de soumission */
+    background-color: #357ABD;
+    transform: translateY(-2px);
+}
+
+/* Style pour les messages d'avertissement */
+.warning {
+    text-align: center;
+    color: #E74C3C;
+    font-size: 24px;
+    margin-bottom: 19px;
+}
+
+/* Style pour les messages */
+.message {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 10px;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Adaptation pour les petits écrans */
+@media (max-width: 768px) {
+    .container-supprimer {
+        margin: 20px 10px;
+        padding: 10px;
+    }
+
+    .recherche-barre {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .recherche-barre input {
+        width: 100%;
+        border-radius: 4px;
+        margin-bottom: 10px;
+    }
+
+    .recherche-barre button {
+        width: 100%;
+        border-radius: 4px;
+    }
+
+    .user-checkbox {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .submit-button {
+        width: 100%;
+    }
+}

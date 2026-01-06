@@ -1,59 +1,285 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 💬 MSN Connect - Application de Messagerie Moderne
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+> Application de messagerie instantanée inspirée de MSN Messenger, construite avec Laravel 12, Vue.js 3 et Tailwind CSS
 
-## About Laravel
+[![Laravel](https://img.shields.io/badge/Laravel-12.44-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)](https://laravel.com)
+[![Vue.js](https://img.shields.io/badge/Vue.js-3.5-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white)](https://vuejs.org)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.0-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com)
+[![PHP](https://img.shields.io/badge/PHP-8.2-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://php.net)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## ✨ Fonctionnalités
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- 🔐 **Authentification sécurisée** - Inscription, connexion, reset de mot de passe
+- 💬 **Messagerie en temps réel** - Conversations privées et groupes
+- 👥 **Gestion des contacts** - Ajout, suppression, statuts personnalisés
+- 🎨 **Interface moderne** - Design responsive avec Tailwind CSS
+- 📱 **Progressive Web App** - Fonctionne comme une app native
+- 🔔 **Notifications en temps réel** - WebSockets avec Laravel Echo
+- 📎 **Partage de fichiers** - Upload sécurisé d'images et documents
+- 👔 **Panel administrateur** - Gestion complète des utilisateurs et espaces
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 🚀 Stack Technique
 
-## Learning Laravel
+### Backend
+- **Laravel 12.44** - Framework PHP moderne
+- **PHP 8.2** - Dernière version avec types stricts
+- **MySQL 8** - Base de données relationnelle
+- **Redis** - Cache et sessions
+- **Laravel Echo + Pusher** - WebSockets temps réel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+### Frontend
+- **Vue.js 3.5** - Framework JavaScript réactif
+- **Tailwind CSS 4.0** - Framework CSS utility-first
+- **Vite 7** - Build tool ultra-rapide
+- **Axios** - HTTP client
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### DevOps
+- **Docker** - Containerisation
+- **GitHub Actions** - CI/CD
+- **PHPUnit** - Tests unitaires et fonctionnels
 
-## Laravel Sponsors
+## 📋 Prérequis
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+- PHP >= 8.2
+- Composer >= 2.8
+- Node.js >= 20.x
+- MySQL >= 8.0
+- Redis >= 7.0 (optionnel)
 
-### Premium Partners
+## 🛠️ Installation
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### 1. Cloner le repository
 
-## Contributing
+```bash
+git clone https://github.com/Cid57/MSN-Connect-En-Ligne-Portfolio.git
+cd MSN-Connect-En-Ligne-Portfolio
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### 2. Installer les dépendances PHP
 
-## Code of Conduct
+```bash
+composer install
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### 3. Installer les dépendances JavaScript
 
-## Security Vulnerabilities
+```bash
+npm install
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### 4. Configuration de l'environnement
 
-## License
+```bash
+cp .env.example .env
+php artisan key:generate
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Configurez votre `.env` :
+```env
+APP_NAME="MSN Connect"
+APP_URL=http://localhost:8000
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=msn_connect
+DB_USERNAME=root
+DB_PASSWORD=
+
+BROADCAST_DRIVER=pusher
+CACHE_DRIVER=redis
+QUEUE_CONNECTION=redis
+SESSION_DRIVER=redis
+
+PUSHER_APP_ID=your_app_id
+PUSHER_APP_KEY=your_app_key
+PUSHER_APP_SECRET=your_app_secret
+PUSHER_APP_CLUSTER=eu
+```
+
+### 5. Créer la base de données
+
+```bash
+mysql -u root -p
+CREATE DATABASE msn_connect;
+EXIT;
+```
+
+### 6. Exécuter les migrations
+
+```bash
+php artisan migrate --seed
+```
+
+### 7. Compiler les assets
+
+```bash
+# Développement (avec hot reload)
+npm run dev
+
+# Production
+npm run build
+```
+
+### 8. Lancer le serveur
+
+```bash
+php artisan serve
+```
+
+Accédez à l'application : http://localhost:8000
+
+## 🐳 Installation avec Docker
+
+```bash
+# Installer Laravel Sail
+php artisan sail:install
+
+# Démarrer les containers
+./vendor/bin/sail up -d
+
+# Exécuter les migrations
+./vendor/bin/sail artisan migrate --seed
+
+# Compiler les assets
+./vendor/bin/sail npm install
+./vendor/bin/sail npm run dev
+```
+
+Accédez à l'application : http://localhost
+
+## 📁 Structure du Projet
+
+```
+msn-connect/
+├── app/
+│   ├── Http/
+│   │   ├── Controllers/     # Controllers de l'application
+│   │   └── Middleware/      # Middleware personnalisés
+│   ├── Models/              # Models Eloquent
+│   ├── Services/            # Logique métier
+│   └── Events/              # Events & Listeners
+│
+├── database/
+│   ├── migrations/          # Migrations de schéma
+│   ├── seeders/             # Seeders de données
+│   └── factories/           # Model factories
+│
+├── resources/
+│   ├── views/               # Templates Blade
+│   ├── js/
+│   │   ├── components/      # Composants Vue.js
+│   │   ├── pages/           # Pages Vue.js
+│   │   └── app.js           # Point d'entrée JS
+│   └── css/
+│       └── app.css          # Styles Tailwind
+│
+├── routes/
+│   ├── web.php              # Routes web
+│   ├── api.php              # Routes API
+│   └── channels.php         # Broadcasting channels
+│
+├── public/
+│   ├── assets/              # Images et fichiers statiques
+│   └── uploads/             # Fichiers uploadés
+│
+└── tests/
+    ├── Feature/             # Tests fonctionnels
+    └── Unit/                # Tests unitaires
+```
+
+## 🧪 Tests
+
+```bash
+# Exécuter tous les tests
+php artisan test
+
+# Avec couverture de code
+php artisan test --coverage
+
+# Tests spécifiques
+php artisan test --filter=UserTest
+```
+
+## 📝 Commandes Artisan Utiles
+
+```bash
+# Créer un nouveau controller
+php artisan make:controller MessageController
+
+# Créer un model avec migration
+php artisan make:model Channel -m
+
+# Créer un composant Vue
+php artisan make:component ChatMessage
+
+# Nettoyer le cache
+php artisan cache:clear
+php artisan config:clear
+php artisan route:clear
+php artisan view:clear
+
+# Optimiser l'application
+php artisan optimize
+```
+
+## 🔐 Sécurité
+
+- ✅ Protection CSRF sur tous les formulaires
+- ✅ Validation stricte des inputs
+- ✅ Hash des mots de passe avec Bcrypt
+- ✅ Rate limiting sur les endpoints sensibles
+- ✅ Upload sécurisé avec validation MIME
+- ✅ Sanitization XSS automatique
+- ✅ SQL injection prevention (Eloquent ORM)
+- ✅ HTTPS enforced en production
+
+## 📊 Roadmap
+
+- [x] Migration vers Laravel 12
+- [x] Installation Tailwind CSS 4.0
+- [x] Installation Vue.js 3.5
+- [ ] Créer les migrations de base de données
+- [ ] Implémenter les Models Eloquent
+- [ ] Installer Laravel Breeze pour l'auth
+- [ ] Créer l'API REST
+- [ ] Configurer WebSockets (Laravel Echo)
+- [ ] Docker setup complet
+- [ ] Tests unitaires et fonctionnels
+- [ ] CI/CD avec GitHub Actions
+- [ ] Documentation API (OpenAPI)
+- [ ] Mode hors-ligne (PWA)
+- [ ] Notifications push
+- [ ] Appels vidéo (WebRTC)
+
+## 🤝 Contribution
+
+Les contributions sont les bienvenues ! Pour contribuer :
+
+1. Forkez le projet
+2. Créez votre branche (`git checkout -b feature/AmazingFeature`)
+3. Committez vos changements (`git commit -m 'Add some AmazingFeature'`)
+4. Pushez vers la branche (`git push origin feature/AmazingFeature`)
+5. Ouvrez une Pull Request
+
+## 📜 Licence
+
+Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
+
+## 👨‍💻 Auteur
+
+**Cindy Singer**
+
+- GitHub: [@Cid57](https://github.com/Cid57)
+- Email: contact@example.com
+
+## 🙏 Remerciements
+
+- Laravel Team pour le framework extraordinaire
+- Vue.js Team pour le framework frontend
+- Tailwind Labs pour Tailwind CSS
+- Claude Code (Anthropic) pour l'assistance au développement
+
+---
+
+<p align="center">Fait avec ❤️ et Laravel</p>

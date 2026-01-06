@@ -28,6 +28,10 @@ class User extends Authenticatable
         'email',
         'password',
         'avatar',
+        'role',
+        'is_banned',
+        'banned_at',
+        'ban_reason',
         'is_admin',
         'is_active',
         'status_id',
@@ -57,6 +61,8 @@ class User extends Authenticatable
             'password' => 'hashed',
             'is_admin' => 'boolean',
             'is_active' => 'boolean',
+            'is_banned' => 'boolean',
+            'banned_at' => 'datetime',
             'last_seen_at' => 'datetime',
         ];
     }
@@ -125,5 +131,61 @@ class User extends Authenticatable
     public function isOnline(): bool
     {
         return $this->last_seen_at?->greaterThan(now()->subMinutes(5)) ?? false;
+    }
+
+    /**
+     * Vérifie si l'utilisateur est administrateur
+     */
+    public function isAdmin(): bool
+    {
+        return $this->role === 'admin';
+    }
+
+    /**
+     * Vérifie si l'utilisateur est modérateur ou administrateur
+     */
+    public function isModerator(): bool
+    {
+        return in_array($this->role, ['moderator', 'admin']);
+    }
+
+    /**
+     * Vérifie si l'utilisateur a un rôle spécifique
+     */
+    public function hasRole(string $role): bool
+    {
+        return $this->role === $role;
+    }
+
+    /**
+     * Vérifie si l'utilisateur peut gérer d'autres utilisateurs
+     */
+    public function canManageUsers(): bool
+    {
+        return $this->isModerator();
+    }
+
+    /**
+     * Scope : Filtre par rôle
+     */
+    public function scopeRole($query, string $role)
+    {
+        return $query->where('role', $role);
+    }
+
+    /**
+     * Scope : Utilisateurs bannis
+     */
+    public function scopeBanned($query)
+    {
+        return $query->where('is_banned', true);
+    }
+
+    /**
+     * Scope : Utilisateurs non bannis
+     */
+    public function scopeNotBanned($query)
+    {
+        return $query->where('is_banned', false);
     }
 }

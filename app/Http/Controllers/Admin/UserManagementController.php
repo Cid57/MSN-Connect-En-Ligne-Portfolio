@@ -45,7 +45,6 @@ class UserManagementController extends Controller
             'stats' => [
                 'total' => User::count(),
                 'admins' => User::where('role', 'admin')->count(),
-                'moderators' => User::where('role', 'moderator')->count(),
                 'users' => User::where('role', 'user')->count(),
                 'banned' => User::where('is_banned', true)->count(),
                 'online' => User::where('last_seen_at', '>=', now()->subMinutes(5))->count(),
@@ -59,7 +58,7 @@ class UserManagementController extends Controller
     public function changeRole(Request $request, User $user)
     {
         $validated = $request->validate([
-            'role' => 'required|in:user,moderator,admin',
+            'role' => 'required|in:user,admin',
         ]);
 
         // Ne pas permettre de se retirer le rôle admin à soi-même

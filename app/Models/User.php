@@ -142,14 +142,6 @@ class User extends Authenticatable
     }
 
     /**
-     * Vérifie si l'utilisateur est modérateur ou administrateur
-     */
-    public function isModerator(): bool
-    {
-        return in_array($this->role, ['moderator', 'admin']);
-    }
-
-    /**
      * Vérifie si l'utilisateur a un rôle spécifique
      */
     public function hasRole(string $role): bool
@@ -162,7 +154,7 @@ class User extends Authenticatable
      */
     public function canManageUsers(): bool
     {
-        return $this->isModerator();
+        return $this->isAdmin();
     }
 
     /**

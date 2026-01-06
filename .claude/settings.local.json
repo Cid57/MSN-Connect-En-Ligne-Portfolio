@@ -15,7 +15,8 @@
       "Bash(composer:*)",
       "Bash(php artisan:*)",
       "Bash(npm install:*)",
-      "Bash(php:*)"
+      "Bash(php:*)",
+      "Bash(curl:*)"
     ]
   }
 }

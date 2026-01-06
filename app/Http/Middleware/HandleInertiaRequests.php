@@ -34,10 +34,6 @@ class HandleInertiaRequests extends Middleware
             'auth' => [
                 'user' => $request->user(),
             ],
-            'ziggy' => fn () => [
-                ...\Tighten\Ziggy\Ziggy::generate(),
-                'location' => $request->url(),
-            ],
         ];
     }
 }

@@ -125,7 +125,7 @@ const submit = () => {
             <!-- Retour à l'accueil -->
             <div class="mt-6 text-center">
                 <Link
-                    :href="route('/')"
+                    href="/"
                     class="text-white/90 hover:text-white text-sm font-medium inline-flex items-center"
                 >
                     ← Retour à l'accueil

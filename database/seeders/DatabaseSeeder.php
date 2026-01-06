@@ -15,11 +15,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
-
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+        // Ordre important : Statuses avant Users
+        $this->call([
+            StatusSeeder::class,
+            UserSeeder::class,
+            // ChannelSeeder::class, // À implémenter plus tard si besoin
         ]);
     }
 }

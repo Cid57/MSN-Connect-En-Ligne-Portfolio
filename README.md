@@ -9,42 +9,44 @@
 
 ## ✨ Fonctionnalités
 
-- 🔐 **Authentification sécurisée** - Inscription, connexion, reset de mot de passe
-- 💬 **Messagerie en temps réel** - Conversations privées et groupes
-- 👥 **Gestion des contacts** - Ajout, suppression, statuts personnalisés
-- 🎨 **Interface moderne** - Design responsive avec Tailwind CSS
-- 📱 **Progressive Web App** - Fonctionne comme une app native
-- 🔔 **Notifications en temps réel** - WebSockets avec Laravel Echo
-- 📎 **Partage de fichiers** - Upload sécurisé d'images et documents
-- 👔 **Panel administrateur** - Gestion complète des utilisateurs et espaces
+-   🔐 **Authentification sécurisée** - Inscription, connexion, reset de mot de passe
+-   💬 **Messagerie en temps réel** - Conversations privées et groupes
+-   👥 **Gestion des contacts** - Ajout, suppression, statuts personnalisés
+-   🎨 **Interface moderne** - Design responsive avec Tailwind CSS
+-   📱 **Progressive Web App** - Fonctionne comme une app native
+-   🔔 **Notifications en temps réel** - WebSockets avec Laravel Echo
+-   📎 **Partage de fichiers** - Upload sécurisé d'images et documents
+-   👔 **Panel administrateur** - Gestion complète des utilisateurs et espaces
 
 ## 🚀 Stack Technique
 
 ### Backend
-- **Laravel 12.44** - Framework PHP moderne
-- **PHP 8.2** - Dernière version avec types stricts
-- **MySQL 8** - Base de données relationnelle
-- **Redis** - Cache et sessions
-- **Laravel Echo + Pusher** - WebSockets temps réel
+
+-   **Laravel 12.44** - Framework PHP moderne
+-   **PHP 8.2** - Dernière version avec types stricts
+-   **MySQL 8** - Base de données relationnelle
+-   **Redis** - Cache et sessions
+-   **Laravel Echo + Pusher** - WebSockets temps réel
 
 ### Frontend
-- **Vue.js 3.5** - Framework JavaScript réactif
-- **Tailwind CSS 4.0** - Framework CSS utility-first
-- **Vite 7** - Build tool ultra-rapide
-- **Axios** - HTTP client
+
+-   **Vue.js 3.5** - Framework JavaScript réactif
+-   **Tailwind CSS 4.0** - Framework CSS utility-first
+-   **Vite 7** - Build tool ultra-rapide
+-   **Axios** - HTTP client
 
 ### DevOps
-- **Docker** - Containerisation
-- **GitHub Actions** - CI/CD
-- **PHPUnit** - Tests unitaires et fonctionnels
+
+-   **Docker** - Containerisation
+-   **GitHub Actions** - CI/CD
+-   **PHPUnit** - Tests unitaires et fonctionnels
 
 ## 📋 Prérequis
 
-- PHP >= 8.2
-- Composer >= 2.8
-- Node.js >= 20.x
-- MySQL >= 8.0
-- Redis >= 7.0 (optionnel)
+-   PHP >= 8.2
+-   Composer >= 2.8
+-   Node.js >= 20.x
+-   MySQL >= 8.0
 
 ## 🛠️ Installation
 
@@ -72,29 +74,6 @@ npm install
 ```bash
 cp .env.example .env
 php artisan key:generate
-```
-
-Configurez votre `.env` :
-```env
-APP_NAME="MSN Connect"
-APP_URL=http://localhost:8000
-
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=msn_connect
-DB_USERNAME=root
-DB_PASSWORD=
-
-BROADCAST_DRIVER=pusher
-CACHE_DRIVER=redis
-QUEUE_CONNECTION=redis
-SESSION_DRIVER=redis
-
-PUSHER_APP_ID=your_app_id
-PUSHER_APP_KEY=your_app_key
-PUSHER_APP_SECRET=your_app_secret
-PUSHER_APP_CLUSTER=eu
 ```
 
 ### 5. Créer la base de données
@@ -225,32 +204,32 @@ php artisan optimize
 
 ## 🔐 Sécurité
 
-- ✅ Protection CSRF sur tous les formulaires
-- ✅ Validation stricte des inputs
-- ✅ Hash des mots de passe avec Bcrypt
-- ✅ Rate limiting sur les endpoints sensibles
-- ✅ Upload sécurisé avec validation MIME
-- ✅ Sanitization XSS automatique
-- ✅ SQL injection prevention (Eloquent ORM)
-- ✅ HTTPS enforced en production
+-   ✅ Protection CSRF sur tous les formulaires
+-   ✅ Validation stricte des inputs
+-   ✅ Hash des mots de passe avec Bcrypt
+-   ✅ Rate limiting sur les endpoints sensibles
+-   ✅ Upload sécurisé avec validation MIME
+-   ✅ Sanitization XSS automatique
+-   ✅ SQL injection prevention (Eloquent ORM)
+-   ✅ HTTPS enforced en production
 
 ## 📊 Roadmap
 
-- [x] Migration vers Laravel 12
-- [x] Installation Tailwind CSS 4.0
-- [x] Installation Vue.js 3.5
-- [ ] Créer les migrations de base de données
-- [ ] Implémenter les Models Eloquent
-- [ ] Installer Laravel Breeze pour l'auth
-- [ ] Créer l'API REST
-- [ ] Configurer WebSockets (Laravel Echo)
-- [ ] Docker setup complet
-- [ ] Tests unitaires et fonctionnels
-- [ ] CI/CD avec GitHub Actions
-- [ ] Documentation API (OpenAPI)
-- [ ] Mode hors-ligne (PWA)
-- [ ] Notifications push
-- [ ] Appels vidéo (WebRTC)
+-   [x] Migration vers Laravel 12
+-   [x] Installation Tailwind CSS 4.0
+-   [x] Installation Vue.js 3.5
+-   [ ] Créer les migrations de base de données
+-   [ ] Implémenter les Models Eloquent
+-   [ ] Installer Laravel Breeze pour l'auth
+-   [ ] Créer l'API REST
+-   [ ] Configurer WebSockets (Laravel Echo)
+-   [ ] Docker setup complet
+-   [ ] Tests unitaires et fonctionnels
+-   [ ] CI/CD avec GitHub Actions
+-   [ ] Documentation API (OpenAPI)
+-   [ ] Mode hors-ligne (PWA)
+-   [ ] Notifications push
+-   [ ] Appels vidéo (WebRTC)
 
 ## 🤝 Contribution
 
@@ -262,23 +241,18 @@ Les contributions sont les bienvenues ! Pour contribuer :
 4. Pushez vers la branche (`git push origin feature/AmazingFeature`)
 5. Ouvrez une Pull Request
 
-## 📜 Licence
-
-Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
-
 ## 👨‍💻 Auteur
 
 **Cindy Singer**
 
-- GitHub: [@Cid57](https://github.com/Cid57)
-- Email: contact@example.com
+-   GitHub: [@Cid57](https://github.com/Cid57)
 
 ## 🙏 Remerciements
 
-- Laravel Team pour le framework extraordinaire
-- Vue.js Team pour le framework frontend
-- Tailwind Labs pour Tailwind CSS
-- Claude Code (Anthropic) pour l'assistance au développement
+-   Laravel Team pour le framework extraordinaire
+-   Vue.js Team pour le framework frontend
+-   Tailwind Labs pour Tailwind CSS
+-   Claude Code (Anthropic) pour l'assistance au développement
 
 ---
 

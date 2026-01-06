@@ -1,65 +1,24 @@
-# =========================
-# Fichiers de configuration sensibles
-# =========================
-.env
-.env.local
-.env.*.local
-
-# =========================
-# Dépendances
-# =========================
-/vendor/
-composer.lock
-
-# =========================
-# Uploads utilisateurs
-# =========================
-/public/assets/uploads/*
-!/public/assets/uploads/.gitkeep
-
-# =========================
-# Logs
-# =========================
 *.log
-/logs/
-
-# =========================
-# Cache
-# =========================
-/cache/
-*.cache
-
-# =========================
-# Fichiers système
-# =========================
 .DS_Store
+.env
+.env.backup
+.env.production
+.phpactor.json
+.phpunit.result.cache
+/.fleet
+/.idea
+/.nova
+/.phpunit.cache
+/.vscode
+/.zed
+/auth.json
+/node_modules
+/public/build
+/public/hot
+/public/storage
+/storage/*.key
+/storage/pail
+/vendor
+Homestead.json
+Homestead.yaml
 Thumbs.db
-desktop.ini
-
-# =========================
-# IDE / Éditeurs
-# =========================
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-
-# =========================
-# Fichiers temporaires
-# =========================
-/tmp/
-*.tmp
-
-# =========================
-# Bases de données
-# =========================
-*.sql.gz
-*.sqlite
-*.db
-
-# =========================
-# Claude (local only)
-# =========================
-.claude/
-settings.local.json
